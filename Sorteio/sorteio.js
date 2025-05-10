@@ -23,3 +23,5 @@ function sortearComida() {
 
 // Executa a função
 sortearComida();
+// Bruno obrigado por compartilhar esse código, eu e minha namorada estávamos em um impasse para decidir o que jantar, e de forma descontraída resolvemos essa questão.
+// Adorei a forma como você estruturou o código, como sugestão utilize a forma switch case para simplificar a execução.
