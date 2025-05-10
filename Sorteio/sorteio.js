@@ -1,41 +1,25 @@
-const prompt = require('prompt-sync')({sigint: true});
+const prompt = require('prompt-sync')({ sigint: true });
 
-prompt("Pressione ENTER para sortear a comida de hoje...");
+function sortearComida() {
+    const opcoesDeComida = [
+        "Pizza",
+        "Hambúrguer",
+        "Sushi",
+        "Churrasco",
+        "Massas",
+        "Dogão",
+        "Bife com fritas",
+        "Estrogonofe"
+    ];
 
-let n1 = Math.floor(Math.random() * 8);
-let comida;
+    prompt("Pressione ENTER para sortear a comida de hoje...");
 
-switch (n1) {
-    case 0:
-        comida = "Pizza";
-        break;
-    case 1:
-        comida = "Hambúrguer";
-        break;
-    case 2:
-        comida = "Sushi";
-        break;
-    case 3:
-        comida = "Churrasco";
-        break;
-    case 4:
-        comida = "Massas";
-        break;
-    case 5:
-        comida = "Dogão";
-        break;
-    case 6:
-        comida = "Bife com fritas";
-        break;
-    case 7:
-        comida = "Estrogonofe";
-        break;
-    default:
-        console.log("Erro no sorteio.");
-        break;
+    const numeroSorteado = Math.floor(Math.random() * opcoesDeComida.length);
+    const comidaEscolhida = opcoesDeComida[numeroSorteado];
+
+    console.log(`Número sorteado: ${numeroSorteado}`);
+    console.log(`Hoje iremos comer: ${comidaEscolhida}!`);
 }
 
-if (comida !== undefined) {
-    console.log(`Número sorteado: ${n1}`);
-    console.log(`Hoje iremos comer: ${comida}!`);
-}
+// Executa a função
+sortearComida();
